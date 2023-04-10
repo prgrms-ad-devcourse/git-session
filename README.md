@@ -1,2 +1,2 @@
 # git-session
-- Test 
+- Test git
