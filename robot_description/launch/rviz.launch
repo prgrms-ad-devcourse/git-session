@@ -1,0 +1,14 @@
+<launch>
+
+	<param name="robot_description" command="cat '$(find robot_description)/urdf/robot.urdf'" />
+    
+	<!-- send false joint value -->
+	<node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+
+	<!-- conbine joint value-->
+	<node name="robot_state_publisher_gui" pkg="robot_state_publisher_gui" type="robot_state_publisher_gui" />
+
+	<!-- Show in Rviz -->
+	<node name="rviz" pkg="rviz" type="rviz" />
+
+</launch>
